@@ -1,0 +1,16 @@
+<mat-spinner *ngIf="isLoading"></mat-spinner>
+<div *ngIf="!isLoading">
+  <mat-card *ngFor="let day of weather.daily" class="weather-card">
+    <mat-card-title class="weather-card-title">
+      {{day.time| date:'EEEE'}}
+    </mat-card-title>
+    <mat-card-subtitle class="weather-card-subtitle">{{ day.time | date:'medium' }}</mat-card-subtitle>
+    <mat-card-content class="weather-card-content">
+<!--      <img mat-card-image src="{{'https://www.meteopool.org/theme/images/wwCodes/graphics/tww'+day.weathercode+'.jpg'}}" alt="Weather." class="weather-card-img">-->
+      <div class="weather-card-detail">Rain: {{day.precipitation_sum}}</div>
+      <div class="weather-card-detail">Max Temperature: {{day.temperature_2m_max}}</div>
+      <div class="weather-card-detail">Min Temperature: {{day.temperature_2m_min}}</div>
+      <div class="weather-card-detail">Weather Code: {{day.weathercode}}</div>
+    </mat-card-content>
+  </mat-card>
+</div>

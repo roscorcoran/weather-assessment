@@ -1,0 +1,16 @@
+<form class="state-selection-form">
+  <mat-form-field class="state-selection">
+    <mat-label>State</mat-label>
+    <input type="text"
+           placeholder="Start typing"
+           aria-label="State"
+           matInput
+           [formControl]="myControl"
+           [matAutocomplete]="auto">
+    <mat-autocomplete #auto="matAutocomplete" [displayWith]="getOptionText" (optionSelected)="updateMySelection($event)">
+      <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+        {{option.state}}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+</form>

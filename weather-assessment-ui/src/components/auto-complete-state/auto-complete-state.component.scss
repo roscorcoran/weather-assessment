@@ -1,0 +1,16 @@
+:host {
+  min-width: 150px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  .state-selection-form {
+    min-width: 150px;
+    width: auto;
+    .state-selection {
+        min-width: 200px;
+    }
+  }
+}
+
+
