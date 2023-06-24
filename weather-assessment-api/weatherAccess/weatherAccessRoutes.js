@@ -14,6 +14,8 @@ let { getAllWeatherAccess } = require('./weatherAccessController')
  */
 router.get('/', async (req, res) => {
     let response = await getAllWeatherAccess();
+    //TODO Not to be in prod - .env
+    res.set('Access-Control-Allow-Origin', 'http://localhost:4200');
     if (response.success == true) {
         res.status(200).json(response);
     } else {

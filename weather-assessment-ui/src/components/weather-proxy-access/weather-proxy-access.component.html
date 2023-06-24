@@ -1,12 +1,24 @@
 <mat-spinner *ngIf="isLoading"></mat-spinner>
-<div *ngIf="!isLoading">
-  <mat-card *ngFor="let day of weather.daily" class="weather-card">
-    <mat-card-title class="weather-card-title">
-      {{day.time| date:'EEEE'}}
-    </mat-card-title>
-    <mat-card-subtitle class="weather-card-subtitle">{{ day.time | date:'medium' }}</mat-card-subtitle>
-    <mat-card-content class="weather-card-content">
-      <div class="weather-card-detail"></div>
-    </mat-card-content>
-  </mat-card>
-</div>
+<mat-table [dataSource]="weatherProxyAccess" *ngIf="!isLoading" class="mat-elevation-z8">
+
+  <!--- Note that these columns can be defined in any order.
+        The actual rendered columns are set as a property on the row definition" -->
+
+  <!-- Position Column -->
+  <ng-container matColumnDef="createdAt">
+    <th mat-header-cell *matHeaderCellDef>Accessed At</th>
+    <td mat-cell *matCellDef="let element">  {{element.createdAt| date:'medium'}} </td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="url">
+    <th mat-header-cell *matHeaderCellDef>URL</th>
+    <td mat-cell *matCellDef="let element">  {{element.url}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</mat-table>
+
+
+

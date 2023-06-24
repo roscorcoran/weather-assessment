@@ -6,7 +6,7 @@ import {NgFor, AsyncPipe} from '@angular/common';
 import {MatAutocompleteModule, MatAutocompleteSelectedEvent} from '@angular/material/autocomplete';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
-import {WeatherService} from '../../services/weather.service';
+import {WeatherService} from '../../services/weather/weather.service';
 
 type State = { latitude: number; state: string; longitude: number };
 

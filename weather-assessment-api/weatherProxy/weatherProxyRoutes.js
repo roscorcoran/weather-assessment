@@ -25,8 +25,9 @@ let { getAllWeatherProxy } = require('./weatherProxyController')
 router.get('/', async (req, res) => {
 
     let response = await getAllWeatherProxy(req.query);
+    //TODO Not to be in prod - .env
+    res.set('Access-Control-Allow-Origin', 'http://localhost:4200');
     if (response.success == true) {
-        res.set('Access-Control-Allow-Origin', 'http://localhost:4200');
         res.status(200).json(response);
     } else {
         res.status(404).json(response);

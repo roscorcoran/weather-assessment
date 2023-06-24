@@ -1,39 +1,24 @@
 $pad-sm: 4px;
 $pad-md: $pad-sm * 2;
 
-.weather-card {
-  max-width: 600px;
-  margin: $pad-md;
-  box-shadow: none;
-  background: #eee;
+:host {
+  flex: 1 0 auto;
+}
 
-  .weather-card-title {
-    padding: $pad-md $pad-md 0;
-  }
-
-  .weather-card-subtitle {
-    padding: 0 $pad-md $pad-md;
-  }
-
-  .weather-card-content {
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    flex: 1 0 auto;
-    display: flex;
-
-    .weather-card-img {
-      $imgWidth: 85px;
-      flex: 0 1 $imgWidth;
-      margin: $pad-md;
-      border-radius: 4px;
-      width: $imgWidth;
-      height: $imgWidth
-    }
-
-    .weather-card-detail {
-      flex: 0 1 auto;
-      padding: $pad-md;
-    }
-  }
+table {
+  width: 100%;
+}
+.mat-column-createdAt {
+  flex: 0 0 204px;
+  width: 204px ;
+}
+.mat-column-url {
+  word-wrap: break-word;
+  white-space: unset;
+  flex: 0 0 auto;
+  width: auto;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+  hyphens: auto;
 }

@@ -1,10 +1,17 @@
 # WeatherAssessmentUi
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.1.
-
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Run `yarn start` for a dev server. Navigate to `http://localhost:4200/`.
+
+The default route is: http://localhost:4200/state-weather
+
+The route to view the weather access proxy: http://localhost:4200/weather-access
+
+
+
+
+
 
 ## Code scaffolding
 

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {WeatherService} from '../../services/weather.service';
+import {WeatherService} from '../../services/weather/weather.service';
 import {MatCardModule} from "@angular/material/card";
 import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
 import {CommonModule} from "@angular/common";

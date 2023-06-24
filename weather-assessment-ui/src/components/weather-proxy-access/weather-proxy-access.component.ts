@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
-import {WeatherService} from '../../services/weather.service';
 import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
 import {MatCardModule} from "@angular/material/card";
-import {DatePipe} from "@angular/common";
+import {CommonModule, DatePipe} from "@angular/common";
+import {WeatherProxyAccessService} from "../../services/weather-proxy-access/weather-proxy-access.service";
+import {MatTableModule} from '@angular/material/table';
 @Component({
   selector: 'weather-proxy-access',
   templateUrl: './weather-proxy-access.component.html',
@@ -11,27 +12,33 @@ import {DatePipe} from "@angular/common";
   imports: [
     MatProgressSpinnerModule,
     MatCardModule,
-    DatePipe
+    DatePipe,
+    CommonModule,
+    MatTableModule,
   ],
 })
 export class WeatherProxyAccessComponent {
-  public weather: any;
+  public weatherProxyAccess: any;
   public isLoading: boolean;
-  constructor(public weatherService: WeatherService) {
+  constructor(public weatherProxyAccessService: WeatherProxyAccessService) {
     this.isLoading = false;
   }
+  displayedColumns: string[] = ['createdAt', 'url'];
   ngOnInit() {
-    // this
-    //   .weatherService
-    //   .weatherIsLoading
-    //   .subscribe((isLoading)=> {
-    //     this.isLoading = isLoading;
-    //   });
-    // this
-    //   .weatherService
-    //   .weather
-    //   .subscribe((data)=> {
-    //     this.weather = data;
-    //   });
+    this
+      .weatherProxyAccessService
+      .weatherProxyAccessIsLoading
+      .subscribe((isLoading)=> {
+        this.isLoading = isLoading;
+      });
+    this
+      .weatherProxyAccessService
+      .weatherProxyAccess
+      .subscribe((data)=> {
+        this.weatherProxyAccess = data;
+      });
+    this
+      .weatherProxyAccessService
+      .getWeatherProxy();
   }
 }
