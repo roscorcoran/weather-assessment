@@ -10,18 +10,18 @@ import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
 import {MatOptionModule} from "@angular/material/core";
 import {HttpClientModule} from "@angular/common/http";
-import { WeatherDisplayComponent } from '../components/weather-display/weather-display.component';
 import {MatExpansionModule} from "@angular/material/expansion";
 import {MatCardModule} from "@angular/material/card";
 import {MatGridListModule} from "@angular/material/grid-list";
 import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
 import {MatSnackBar} from "@angular/material/snack-bar";
 import {AppRoutingModule} from "./app-routing.module";
+import {StateWeatherComponent} from "../components/state-weather/state-weather.component";
+import {WeatherDisplayComponent} from "../components/weather-display/weather-display.component";
 
 @NgModule({
   declarations: [
     AppComponent,
-    WeatherDisplayComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,6 +39,8 @@ import {AppRoutingModule} from "./app-routing.module";
     MatGridListModule,
     MatProgressSpinnerModule,
     AutoCompleteStateComponent,
+    StateWeatherComponent,
+    WeatherDisplayComponent,
   ],
   providers: [
     MatSnackBar

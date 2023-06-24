@@ -1,9 +1,18 @@
 import { Component } from '@angular/core';
 import {WeatherService} from '../../services/weather.service';
+import {MatCardModule} from "@angular/material/card";
+import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
+import {CommonModule} from "@angular/common";
 @Component({
   selector: 'app-weather-display',
   templateUrl: './weather-display.component.html',
-  styleUrls: ['./weather-display.component.scss']
+  styleUrls: ['./weather-display.component.scss'],
+  standalone: true,
+  imports: [
+    CommonModule,
+    MatCardModule,
+    MatProgressSpinnerModule,
+  ],
 })
 export class WeatherDisplayComponent {
   public weather: any;
@@ -22,7 +31,6 @@ export class WeatherDisplayComponent {
       .weatherService
       .weather
       .subscribe((data)=> {
-        console.log('data', data);
         this.weather = data;
       });
   }

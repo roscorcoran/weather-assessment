@@ -1,0 +1,12 @@
+<mat-spinner *ngIf="isLoading"></mat-spinner>
+<div *ngIf="!isLoading">
+  <mat-card *ngFor="let day of weather.daily" class="weather-card">
+    <mat-card-title class="weather-card-title">
+      {{day.time| date:'EEEE'}}
+    </mat-card-title>
+    <mat-card-subtitle class="weather-card-subtitle">{{ day.time | date:'medium' }}</mat-card-subtitle>
+    <mat-card-content class="weather-card-content">
+      <div class="weather-card-detail"></div>
+    </mat-card-content>
+  </mat-card>
+</div>

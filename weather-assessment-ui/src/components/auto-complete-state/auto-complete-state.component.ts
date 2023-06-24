@@ -306,10 +306,8 @@ export class AutoCompleteStateComponent implements OnInit {
   }
 
   updateMySelection($event: MatAutocompleteSelectedEvent) {
-    console.log('MatAutocompleteSelectedEvent', $event.option.value);
     const lat = $event?.option?.value?.latitude;
     const lng = $event?.option?.value?.longitude;
-    console.log(lat, lng);
     if (lat && lng) {
       this.weatherService.getWeatherFromLatLng(lat, lng);
     }
