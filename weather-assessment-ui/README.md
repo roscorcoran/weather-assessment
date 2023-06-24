@@ -1,12 +1,25 @@
 # WeatherAssessmentUi
 
 ## Development server
+First run:
 
-Run `yarn start` for a dev server. Navigate to `http://localhost:4200/`.
+``yarn install``
 
-The default route is: http://localhost:4200/state-weather
+then
 
-The route to view the weather access proxy: http://localhost:4200/weather-access
+``yarn dev``
+
+This will run the server and bind to port 4200 by default.
+
+Navigate to `http://localhost:4200/`.
+
+The default route is:
+
+http://localhost:4200/state-weather
+
+The route to view the weather access proxy: 
+
+http://localhost:4200/weather-access
 
 
 

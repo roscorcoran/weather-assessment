@@ -1,5 +1,9 @@
 $pad-sm: 4px;
 $pad-md: $pad-sm * 2;
+:host {
+  display: flex;
+  justify-content: center;
+}
 
 .weather-card {
   max-width: 600px;
@@ -37,3 +41,4 @@ $pad-md: $pad-sm * 2;
     }
   }
 }
+
