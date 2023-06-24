@@ -5,7 +5,7 @@ let { getAllWeatherAccess } = require('./weatherAccessController')
 
 /**
  * @swagger
- * /weather-access:
+ * /weatheraccess:
  *   get:
  *     description: All weather access
  *     responses:
