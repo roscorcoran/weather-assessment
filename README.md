@@ -14,7 +14,7 @@ using the app that can be retrieved and viewed in the UI.
 - Yarn: `1.22.17`
 
 ## Angular UI
-View the [weather-assessment-ui/Readme.md](weather-assessment-ui/Readme.md) located in weather-assessment-ui folder to build/run/test
+View the [weather-assessment-ui/README.md](weather-assessment-ui/README.md) located in weather-assessment-ui folder to build/run/test
 
 The `ng new ...` command was used to bootstrap the UI
 
