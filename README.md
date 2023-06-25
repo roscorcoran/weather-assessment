@@ -12,21 +12,26 @@ using the app that can be retrieved and viewed in the UI.
 ## Built With
 - Node: `v18.16.0`
 - Yarn: `1.22.17`
+- Angular `16.1.0`
+- Express `4.18.2`
+
+## Mongo DB
+- A Mongo DB URL can be set in the .env file of the project, it will create the table 'test'.
+- Other-wise you can provide me your IP and I can whitelist it in the instance.
 
 ## Angular UI
-View the [weather-assessment-ui/README.md](weather-assessment-ui/README.md) located in weather-assessment-ui folder to build/run/test
-
-The `ng new ...` command was used to bootstrap the UI
+- View the [weather-assessment-ui/README.md](weather-assessment-ui/README.md) located in weather-assessment-ui folder to build/run/test
+- The `ng new ...` command was used to bootstrap the UI
 
 ## Node/Mongo Backend
-View the [weather-assessment-api/Readme.md](weather-assessment-api/Readme.md) located in weather-assessment-api folder to build/run/test
+- View the [weather-assessment-api/Readme.md](weather-assessment-api/Readme.md) located in weather-assessment-api folder to build/run/test
 
-A tutorial was followed for the boilerplate for the API portion:
+- A tutorial was followed for the boilerplate for the API portion:
 
 https://dev.to/mikefmeyer/build-a-node-js-express-rest-api-with-mongodb-and-swagger-3de9
 
 ## Improvements
-- Expand and write the tests
-- Improve the approach to SCSS structure
+- Expand the tests on the UI and create tests on the API
+- Improve the approach to SCSS structure/themes
 - Improve use of swagger/open-api
 - Error handling in both apps can be improved
