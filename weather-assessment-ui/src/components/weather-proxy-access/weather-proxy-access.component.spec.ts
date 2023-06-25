@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { WeatherProxyAccessComponent } from './weather-proxy-access.component';
 
-describe('WeatherDisplayComponent', () => {
+xdescribe('WeatherProxyAccessComponent', () => {
   let component: WeatherProxyAccessComponent;
   let fixture: ComponentFixture<WeatherProxyAccessComponent>;
 

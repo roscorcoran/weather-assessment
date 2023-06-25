@@ -18,7 +18,6 @@ View the [weather-assessment-ui/README.md](weather-assessment-ui/README.md) loca
 
 The `ng new ...` command was used to bootstrap the UI
 
-
 ## Node/Mongo Backend
 View the [weather-assessment-api/Readme.md](weather-assessment-api/Readme.md) located in weather-assessment-api folder to build/run/test
 
@@ -26,3 +25,8 @@ A tutorial was followed for the boilerplate for the API portion:
 
 https://dev.to/mikefmeyer/build-a-node-js-express-rest-api-with-mongodb-and-swagger-3de9
 
+## Improvements
+- Expand and write the tests
+- Improve the approach to SCSS structure
+- Improve use of swagger/open-api
+- Error handling in both apps can be improved

@@ -18,6 +18,7 @@ import {MatSnackBar} from "@angular/material/snack-bar";
 import {AppRoutingModule} from "./app-routing.module";
 import {StateWeatherComponent} from "../components/state-weather/state-weather.component";
 import {WeatherDisplayComponent} from "../components/weather-display/weather-display.component";
+import {RouterModule} from "@angular/router";
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import {WeatherDisplayComponent} from "../components/weather-display/weather-dis
     AutoCompleteStateComponent,
     StateWeatherComponent,
     WeatherDisplayComponent,
+    RouterModule,
   ],
   providers: [
     MatSnackBar

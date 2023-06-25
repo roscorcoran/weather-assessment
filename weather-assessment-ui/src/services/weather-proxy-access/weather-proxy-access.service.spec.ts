@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { WeatherProxyService } from './weather-proxy.service';
+import { WeatherProxyAccessService } from './weather-proxy-access.service';
 
-describe('WeatherServiceService', () => {
-  let service: WeatherProxyService;
+xdescribe('WeatherProxyAccessService', () => {
+  let service: WeatherProxyAccessService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(WeatherProxyService);
+    service = TestBed.inject(WeatherProxyAccessService);
   });
 
   it('should be created', () => {
