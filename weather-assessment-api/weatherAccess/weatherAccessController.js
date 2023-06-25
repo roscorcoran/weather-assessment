@@ -9,7 +9,7 @@ async function getAllWeatherAccess() {
             data: weatherAccess,
         };
     } catch (err) {
-        return { success: false, message: "Catchphrases not found" };
+        return { success: false, message: "WeatherAccess not found" };
     }
 }
 
